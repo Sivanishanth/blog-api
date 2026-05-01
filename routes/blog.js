@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const blogController = require('../controllers/blogController')
-const protect = require('../middleware/authMiddle')
+const protect = require('../middleware/authMiddleware')
 
 router.get('/',protect,blogController.getAllBlog)
 router.post('/',protect,blogController.createBlog)

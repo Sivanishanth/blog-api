@@ -7,7 +7,7 @@ const protect = (req,res,next)=>{
         return res.json({message : "No such Token"})
     }
 
-    const decoded = jwt.verify(token,'secretkey')
+    const decoded = jwt.verify(token,process.env.JWT_KEY)
     req.user = decoded
     next() 
 }
