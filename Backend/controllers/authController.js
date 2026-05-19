@@ -72,6 +72,7 @@ const login = async (req, res) => {
 
         //token generating
 
+        console.log(process.env.JWT_KEY)
         const token = jwt.sign(
             { userId: userLogin._id },
             process.env.JWT_KEY,
@@ -84,5 +85,6 @@ const login = async (req, res) => {
         res.status(500).json({ message: err.message })
     }
 }
+
 
 module.exports = { register, login }
