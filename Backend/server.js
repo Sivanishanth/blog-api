@@ -7,8 +7,8 @@ const blogRouters = require('./routes/blog')
 
 const app = express()
 app.use(cors({
-    origin : "*" ,
-    credentials : true
+    origin: "http://localhost:5173",
+    credentials: true
 }))
 app.use(express.json())
 app.use('/auth',auth)
