@@ -71,8 +71,8 @@ const login = async (req, res) => {
         }
 
         //token generating
-
-        console.log(process.env.JWT_KEY)
+        console.log("JWT:", process.env.JWT_KEY)
+        console.log("BODY:", req.body)
         const token = jwt.sign(
             { userId: userLogin._id },
             process.env.JWT_KEY,
