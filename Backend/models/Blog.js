@@ -1,10 +1,12 @@
 const mongoose = require('mongoose')
 
+
 const blogSchema = new mongoose.Schema(
     {
         title : String,
         body : String,
-        author : String
+        author : String,
+        userId : String
     }
 )
 

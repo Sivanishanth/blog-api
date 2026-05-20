@@ -2,7 +2,7 @@ const blog = require('../models/Blog')
 
 const getAllBlog = async (req, res) => {
     try {
-        const blogs = await blog.find()
+        const blogs = await blog.find({ userId: req.user.userId })
         res.status(200).json(blogs)
     } catch (err) {
         res.status(404).json({ message: err.message })
@@ -12,6 +12,7 @@ const getAllBlog = async (req, res) => {
 const createBlog = async (req, res) => {
     try {
         const newBlog = new blog(req.body)
+        newBlog.userId = req.user.userId
         await newBlog.save()
         res.status(201).json(newBlog)
     } catch (err) {
