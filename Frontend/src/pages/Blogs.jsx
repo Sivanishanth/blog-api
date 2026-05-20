@@ -22,7 +22,7 @@ function Blogs(){
 
     const fetchBlog = async ()=>{
         try{
-            const response = await axios.get('http://localhost:5000/blog',{
+            const response = await axios.get('https://blog-api-flrk.onrender.com/blogs',{
             headers : {Authorization : token}
         })
         setBlogs(response.data)
@@ -33,7 +33,7 @@ function Blogs(){
 const handleCreateBlog = async (e)=>{
     e.preventDefault()
     try{
-        await axios.post('http://localhost:5000/blog',
+        await axios.post('https://blog-api-flrk.onrender.com/blogs',
             {title,body},
             {headers : {Authorization : token}}
         )
@@ -46,7 +46,7 @@ const handleCreateBlog = async (e)=>{
 }
 const handleDelete = async (id) =>{
     try{
-        await axios.delete(`http://localhost:5000/blog/${id}`,{
+        await axios.delete(`https://blog-api-flrk.onrender.com/blogs/${id}`,{
             headers : {Authorization : token}
         })
         fetchBlog()
@@ -57,7 +57,7 @@ const handleDelete = async (id) =>{
 
 const handleUpdate = async (id)=>{
     try{
-        await axios.put(`http://localhost:5000/blog/${id}`,
+        await axios.put(`https://blog-api-flrk.onrender.com/blogs/${id}`,
            { title : editTitle , body : editBody }, 
            { headers : {Authorization : token} }
         )
@@ -76,6 +76,10 @@ const startEditting = (blogs) =>{
 
 return(
     <div>
+        <div className="blogsNavbar">
+            <h1>Siva Blogs</h1>
+            <button className="logoutBtn">logout</button>
+        </div>
         <h2>Blogs</h2>
         <form onSubmit={handleCreateBlog}>
             <input
@@ -83,12 +87,12 @@ return(
              id="create-blog-title"
              placeholder="Title"
              value={title}
-             onChange={(e)=> setTitle(e.target.value)} />
+             onChange={(e)=> setTitle(e.target.value)} required/>
 
              <textarea id="content-blog"
              placeholder="Body Content"
              value={body}
-             onChange={(e)=> setBody(e.target.value)} />
+             onChange={(e)=> setBody(e.target.value)} required/>
 
              <button type="submit">Create Blog</button>
         </form>
@@ -119,7 +123,6 @@ return(
         </div>
     </div>
 )
-
 }
 
 export default Blogs
