@@ -13,6 +13,10 @@ app.use(cors({
     credentials: true
 }))
 app.use(express.json())
+
+app.get("/", (req, res) => {
+    res.json({ message: "Blog API is running 🚀" })
+})
 app.use('/auth',auth)
 app.use('/blog',blogRouters)
 
