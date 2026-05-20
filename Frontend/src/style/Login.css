@@ -62,3 +62,47 @@
   color: red;
   font-size: 0.9rem;
 }
+
+.login-container p a{
+  display: inline-block;
+  color: #1c1b27;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.login-container p a span{
+  color: #7772d7;
+}
+
+.login-container p a:hover{
+  color: #010110;
+  text-decoration: underline;
+  text-decoration-color: #4f46e5;
+  scale: 1.08;
+}
+
+.register-container p a{
+  display: inline-block;
+  color: #1c1b27;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.register-container p a span{
+  color: #7772d7;
+}
+
+.register-container p a:hover{
+  color: #010110;
+  text-decoration: underline;
+  text-decoration-color: #4f46e5;
+  scale: 1.08;
+}

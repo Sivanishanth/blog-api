@@ -26,6 +26,7 @@ function Register(){
             <h2 className="register-title">Register</h2>
             <form className="register-form" onSubmit={handleRegister}>
                 <input 
+                className="login-input"
                 type="text"
                 id="username"
                 placeholder="Name"
@@ -33,6 +34,7 @@ function Register(){
                 onChange={(e)=> setName(e.target.value)} />
 
                 <input 
+                className="login-input"
                 type="email"
                 id="blog-email"
                 placeholder="Email"
@@ -40,12 +42,14 @@ function Register(){
                 onChange={(e)=>setEmail(e.target.value)} />
 
                 <input type="password" 
+                className="login-input"
                 id="blog-password"
                 placeholder="Password"
                 value={password}
                 onChange={(e)=>setPassword(e.target.value)} />
 
-                <button type="submit">Register</button>
+                <button className="login-btn" type="submit">Register</button>
+                <p><a href="/login">Already have an account? <span>Login here</span></a></p>
             </form>
             {error && <p style={{color:'red'}}>{error}</p>}
         </div>

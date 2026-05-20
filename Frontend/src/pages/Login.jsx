@@ -26,7 +26,7 @@ function Login() {
     }
     return(
         <div className="login-container">
-            <h2 className="login-title">Login Page</h2>
+            <h2 className="login-title">Login</h2>
             <form className="login-form" onSubmit={handleLogin}>
                 <input 
                 className="login-input"
@@ -45,6 +45,7 @@ function Login() {
                 onChange={(e)=> setPassword(e.target.value)} />
 
                 <button className="login-btn" type="submit">Login</button>
+                <p><a href="/register">Don't have an account? <span>Register here</span></a></p>
             </form>
             {error && <p style={{color:'red'}}>{error}</p>}
         </div>
