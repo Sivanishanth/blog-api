@@ -1,31 +1,54 @@
-# 🚀 Blog API with Authentication (Node.js + Express + MongoDB)
+# 🚀  Full Stack MERN Blog Application
 
 ## 📌 Description
 
-This is a RESTful Blog API built using Node.js, Express.js, and MongoDB.
+This is a Full Stack MERN Blog Application built using React.js, Node.js, Express.js, and MongoDB.
 
-The application includes secure user authentication using JWT and password hashing with bcryptjs. Users can register, login, and perform CRUD operations on blog posts. All protected blog routes are secured using authentication middleware and validation middleware.
+The application allows users to register, login, create blog posts, view blogs, and manage content securely using JWT authentication.
 
-The project follows the MVC (Model-View-Controller) architecture for better scalability and maintainability.
+The frontend communicates with the backend REST API using Axios, while MongoDB is used for data storage. Protected routes ensure that only authenticated users can access blog management features.
+
+The project follows the MVC (Model-View-Controller) architecture on the backend and demonstrates full-stack development concepts including authentication, API integration, CRUD operations, and deployment.
 
 ---
 
-# 🔥 Features
+## 🔥 Features
 
-* 🔐 User Registration with Hashed Passwords
-* 🔑 User Login using JWT Authentication
-* 🛡️ Protected Routes using Middleware
-* ✅ Input Validation Middleware
-* 📝 Create Blog Posts
-* 📄 Get All Blog Posts
-* ❌ Delete Blog Posts
-* ⚡ REST API Architecture using MVC Pattern
-* 🌐 Environment Variables using `.env`
-* 🚀 Backend Deployment Ready
+- 🔐 User Registration
+- 🔑 User Login using JWT Authentication
+- 🛡️ Protected Routes
+- ✅ Input Validation
+- 📝 Create Blog Posts
+- 📄 View All Blog Posts
+- ✏️ Update Existing Blog Posts
+- ❌ Delete Blog Posts
+- 🚪 Logout Functionality
+- ⚡ React Frontend with Axios Integration
+- 🌐 Full Stack Deployment
+- 📱 Responsive User Interface
+- 🔒 Ownership-Based Authorization (Users can manage only their own blogs)
+
+---
+
+🎯 What I Learned
+
+• JWT Authentication & Authorization
+• React Router Navigation
+• Axios API Integration
+• MongoDB Data Modeling
+• MVC Architecture
+• REST API Development
+• Full Stack Deployment using Netlify & Render
 
 ---
 
 # 🛠️ Tech Stack
+
+## Frontend
+React.js
+React Router DOM
+Axios
+CSS
 
 ## Backend
 
@@ -47,9 +70,30 @@ The project follows the MVC (Model-View-Controller) architecture for better scal
 * Custom Validation Middleware
 * Regex Validation
 
-## Deployment
+## 🚀 Live Demo
 
-* Render
+Frontend:
+https://sivablog.netlify.app
+
+Backend:
+https://blog-api-flrk.onrender.com
+
+---
+
+## 📸 Screenshots
+
+### Login Page
+
+<img width="2500" height="1464" alt="Screenshot 2026-06-04 115938" src="https://github.com/user-attachments/assets/a022e4dd-f7df-4632-a16c-1c8076e621b2" />
+
+### Register Page
+
+<img width="2499" height="1469" alt="Screenshot 2026-06-04 115955" src="https://github.com/user-attachments/assets/6a7f3421-fb6b-46c9-a4f3-2aa340c8090d" />
+
+### Blog Dashboard
+
+<img width="2560" height="1600" alt="Screenshot (145)" src="https://github.com/user-attachments/assets/0e7f41c5-d8dc-439b-a9f1-00267928955d" />
+
 
 ---
 
@@ -87,7 +131,7 @@ blog-api/
 ## 1️⃣ Clone Repository
 
 ```bash id="jlwm83"
-git clone https://github.com/your-username/blog-api.git
+git clone https://github.com/Sivanishanth/blog-api.git
 cd blog-api
 ```
 
@@ -167,22 +211,19 @@ The project includes custom validation middleware for:
 * Required field validation
 * Email format validation using Regex
 * Password length validation
-* Authentication token validation
+* Authentication token validation 
 
----
 
-# 🚀 Deployment
-
-Backend deployed using Render with MongoDB Atlas integration.
 
 ---
 
 # 🔮 Future Improvements
 
-* ✏️ Update Blog API
-* 🔒 Role-based Authorization
-* 🌐 Frontend Integration using React
-* 🚀 Full Stack MERN Deployment
+# ❤️ Like and Comment System
+# 🖼️ Image Upload Support
+# 🔒 Role-Based Authorization
+# 👤 User Profiles
+# 📱 Improved Responsive Design
 
 ---
 
